@@ -1,0 +1,16 @@
+name: ExpSquaredCenteredKernel
+stationary: false
+params: [m,t]
+
+doc: The exponential-squared kernel is a stationary kernel where the value.
+
+
+value: |
+       return exp(-0.5*((x1-m)*(x1-m))/(t*t))*exp(-0.5*((x2-m)*(x2-m))/(t*t));
+
+grad:
+    m: |
+       return (((x1-m)*(x2-m))/(t*t*t*t))*exp(-0.5*((x1-m)*(x1-m))/(t*t))*exp(-0.5*((x2-m)*(x2-m))/(t*t));
+    t: |
+       return (((x1-m)*(x1-m)*(x2-m)*(x2-m))/(t*t*t*t*t*t))*exp(-0.5*((x1-m)*(x1-m))/(t*t))*exp(-0.5*((x2-m)*(x2-m))/(t*t));
+
