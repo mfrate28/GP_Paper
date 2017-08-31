@@ -10,8 +10,8 @@ value: |
 
 grad:
     m: |
-       return exp(-0.5*((x1-m)*(x1-m)+(x2-m)*(x2-m))/(t*t))*exp(-0.5*((x1-x2)*(x1-x2))/(L*L))*(((m-x1)+(m-x2))/t*t);
+       return exp(-0.5*((x1-m)*(x1-m)+(x2-m)*(x2-m))/(t*t))*exp(-0.5*((x1-x2)*(x1-x2))/(L*L))*(((m-x1)+(m-x2))/(t*t));
     t: |
-       return exp(-0.5*((x1-m)*(x1-m)+(x2-m)*(x2-m))/(t*t))*exp(-0.5*((x1-x2)*(x1-x2))/(L*L))*(((x1-m)*(x1-m)+(x2-m)*(x2-m))/t*t*t);
+       return exp(-0.5*((x1-m)*(x1-m)+(x2-m)*(x2-m))/(t*t))*exp(-0.5*((x1-x2)*(x1-x2))/(L*L))*(((x1-m)*(x1-m)+(x2-m)*(x2-m))/(t*t*t));
     L: |      
-       return exp(-0.5*((x1-m)*(x1-m)+(x2-m)*(x2-m))/(t*t))*exp(-0.5*((x1-x2)*(x1-x2))/(L*L))*(((x1-x2)*(x1-x2))/L*L*L);
+       return exp(-0.5*((x1-m)*(x1-m)+(x2-m)*(x2-m))/(t*t))*exp(-0.5*((x1-x2)*(x1-x2))/(L*L))*(((x1-x2)*(x1-x2))/(L*L*L));
